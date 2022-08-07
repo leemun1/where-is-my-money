@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 
 const initialHistory = [];
-const initialUser = {};
+const initialUser = null;
 
 export const useHistoryStore = defineStore('history', {
   state: () => ({
