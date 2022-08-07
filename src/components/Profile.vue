@@ -16,9 +16,10 @@
 </template>
 
 <script>
-import { supabase } from '../supabase';
-import { useUserStore } from '../store';
+import { useToast } from 'primevue/usetoast';
 import { onMounted, ref } from 'vue';
+import { useUserStore } from '../store';
+import { supabase } from '../supabase';
 
 export default {
   setup() {
@@ -27,6 +28,7 @@ export default {
     const avatar_url = ref('');
 
     const userStore = useUserStore();
+    const toast = useToast();
 
     async function getProfile() {
       try {
@@ -46,8 +48,11 @@ export default {
           avatar_url.value = data.avatar_url;
         }
       } catch (error) {
-        console.log('Get profile error?', error);
-        alert(error.message);
+        toast.add({
+          severity: 'error',
+          summary: 'Oops, something went wrong',
+          detail: error.message,
+        });
       } finally {
         loading.value = false;
       }
