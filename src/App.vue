@@ -4,7 +4,7 @@ import Auth from './components/Auth.vue';
 import EntryEditor from './components/EntryEditor/EntryEditor.vue';
 import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
-import History from './components/History/History.vue';
+import TransactionHistory from './components/History/TransactionHistory.vue';
 import { useUserStore } from './store';
 import { supabase } from './supabase';
 
@@ -14,7 +14,7 @@ export default {
     EntryEditor,
     Header,
     Footer,
-    History,
+    TransactionHistory,
     AppLogo,
   },
 
@@ -49,7 +49,7 @@ export default {
   <div v-else class="p-24 flex flex-col w-full h-full">
     <Header />
     <div class="flex">
-      <History />
+      <TransactionHistory />
       <EntryEditor />
     </div>
     <div class="mt-auto">

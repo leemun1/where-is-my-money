@@ -1,7 +1,7 @@
 <template>
   <Card class="mr-6 grow">
     <template #title>
-      <h1 class="font-semibold">History</h1>
+      <h1 class="font-semibold">Transaction history</h1>
     </template>
     <template #content>
       <DataTable
