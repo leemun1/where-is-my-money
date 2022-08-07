@@ -3,12 +3,12 @@ import { defineStore } from 'pinia';
 const initialHistory = [];
 const initialUser = null;
 
-export const useHistoryStore = defineStore('history', {
+export const useTransactionHistoryStore = defineStore('history', {
   state: () => ({
     history: initialHistory,
   }),
   actions: {
-    async getHistory() {
+    async getTransactionHistory() {
       // const response = await fetch('http://localhost:8000/items/');
       // const data = await response.json();
       // const formattedHistory = data.map((item) => ({

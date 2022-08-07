@@ -55,7 +55,7 @@ import AmountColumn from './Columns/AmountColumn.vue';
 import CategoryColumn from './Columns/CategoryColumn.vue';
 import SubCategoryColumn from './Columns/SubCategoryColumn.vue';
 
-import { useHistoryStore } from '../../store';
+import { useTransactionHistoryStore } from '../../store';
 
 export default {
   components: {
@@ -67,16 +67,16 @@ export default {
     SubCategoryColumn,
   },
   setup() {
-    const historyStore = useHistoryStore();
+    const historyStore = useTransactionHistoryStore();
 
     return { historyStore };
   },
   mounted() {
-    this.getHistory();
+    this.getTransactionHistory();
   },
   methods: {
-    getHistory() {
-      this.historyStore.getHistory();
+    getTransactionHistory() {
+      this.historyStore.getTransactionHistory();
     },
   },
 };

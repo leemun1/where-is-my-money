@@ -53,7 +53,7 @@ import DateField from './Fields/DateField.vue';
 import SourceField from './Fields/SourceField.vue';
 import SubCategoryField from './Fields/SubCategoryField.vue';
 import TitleField from './Fields/TitleField.vue';
-import { useHistoryStore } from '../../store';
+import { useTransactionHistoryStore } from '../../store';
 
 export default {
   components: {
@@ -65,7 +65,7 @@ export default {
     TitleField,
   },
   setup() {
-    const historyStore = useHistoryStore();
+    const historyStore = useTransactionHistoryStore();
     return {
       historyStore,
     };

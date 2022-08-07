@@ -1,3 +1,3 @@
-import { useHistoryStore, useUserStore } from './store';
+import { useTransactionHistoryStore, useUserStore } from './store';
 
-export { useHistoryStore, useUserStore };
+export { useTransactionHistoryStore, useUserStore };
